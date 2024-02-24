@@ -18,7 +18,7 @@ type FrankenHandler struct{}
 func (h FrankenHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	req, err := frankenphp.NewRequestWithContext(
 		r,
-		frankenphp.WithRequestDocumentRoot("/Users/margulan/Coding/Personal/wails-frankenphp/root/public/index.php", false),
+		frankenphp.WithRequestDocumentRoot("/path/to/public/index.php", false),
 	)
 
 	if err != nil {
